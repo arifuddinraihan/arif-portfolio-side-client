@@ -1,10 +1,11 @@
 import React from 'react';
 import profile from '../../../assets/DP.jpg'
+import ThemeChange from '../../../Components/ThemeChange/ThemeChange';
 
 const Sidebar = () => {
     return (
         <div>
-            <div className="flex flex-col w-64 h-screen px-4 py-8 border-r dark:bg-gray-900 dark:border-gray-700">
+            <div className="flex flex-col w-64 px-4 py-8 dark:bg-gray-900 dark:border-gray-700">
 
                 <div className="flex flex-col items-center mt-6 -mx-2">
                     <img className="object-cover w-24 h-24 mx-2 rounded-full" src={profile} alt="avatar" />
@@ -39,6 +40,11 @@ const Sidebar = () => {
 
                             <span className="mx-4 font-medium">My Projects</span>
                         </a>
+                        <div className="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 dark:hover:text-gray-200 hover:text-gray-700">
+                            <ThemeChange></ThemeChange>
+                            <button className='btn btn-sm btn-ghost mx-4'>
+                            </button>
+                        </div>
                     </nav>
                 </div>
             </div>
