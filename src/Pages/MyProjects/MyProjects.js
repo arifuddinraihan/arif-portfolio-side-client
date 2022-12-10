@@ -5,7 +5,7 @@ const MyProjects = () => {
         <div>
             <section className=" dark:bg-gray-900">
                 <div className="container px-6 py-10 mx-auto">
-                    <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Latest Work
+                    <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Projects Completed
                     </h1>
                     <div className='hidden md:block'>
                         <div className="flex py-4 mt-4 overflow-x-auto overflow-y-hidden md:justify-center dark:border-gray-700">
