@@ -18,7 +18,7 @@ const MainLayout = () => {
                     <div className='flex-none w-64 hidden lg:block'>
 
                     </div>
-                    <div className='grow'>
+                    <div className='grow lg:ml-4'>
                         <Homepage></Homepage>
                     </div>
                 </div>
