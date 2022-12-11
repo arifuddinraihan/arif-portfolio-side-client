@@ -1,8 +1,5 @@
 import React from 'react';
-import { PhotoProvider, PhotoView } from 'react-photo-view';
-import { Link } from 'react-router-dom';
 import resumePdf from '../../../assets/resume_of_arifuddin_mern_web_dev.pdf'
-
 
 const ResumeModal = () => {
     const handleDownloadPdf = () => {
@@ -35,7 +32,7 @@ const ResumeModal = () => {
                         </figure>
                     </div>
                     <div className='flex justify-center gap-5'>
-                        <a href='https://drive.google.com/file/d/1QFyErJSRJfFcJlK4SHyEMFt6vTTzaKXC/view?usp=share_link' target='_blank'
+                        <a href='https://drive.google.com/file/d/1QFyErJSRJfFcJlK4SHyEMFt6vTTzaKXC/view' target='_blank'
                             className="btn btn-primary my-2">View Full Resume</a>
                         <button onClick={handleDownloadPdf}
                             className="btn btn-primary my-2">Download PDF</button>

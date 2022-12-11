@@ -1,8 +1,26 @@
 import React from 'react';
 import profile from '../../../assets/DP.jpg'
 import ThemeChange from '../../../Components/ThemeChange/ThemeChange';
+import { FaEye, FaDownload } from "react-icons/fa";
+import ResumeModal from '../../MainHeroSection/ResumeModal/ResumeModal';
+import resumePdf from '../../../assets/resume_of_arifuddin_mern_web_dev.pdf'
 
 const Sidebar = () => {
+    const handleDownloadPdf = () => {
+        // using Java Script method to get PDF file
+        fetch(resumePdf).then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = resumePdf;
+                alink.click();
+            })
+        })
+    }
+
     return (
         <div>
             <div className="flex flex-col w-64 px-4 py-8 dark:bg-gray-900 dark:border-gray-700">
@@ -40,14 +58,20 @@ const Sidebar = () => {
 
                             <span className="mx-4 font-medium">My Projects</span>
                         </a>
-                        <div className="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 dark:hover:text-gray-200 hover:text-gray-700">
+                        <div className="flex flex-row px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 dark:hover:text-gray-200 hover:text-gray-700">
                             <ThemeChange></ThemeChange>
-                            <button className='btn btn-sm btn-ghost mx-4'>
+                            <label htmlFor="resume-modal" className='btn btn-sm btn-ghost mx-2 text-xl'>
+                                <FaEye></FaEye>
+                            </label>
+                            <button onClick={handleDownloadPdf}
+                                className='btn btn-sm btn-ghost mx-2 text-lg'>
+                                <FaDownload></FaDownload>
                             </button>
                         </div>
                     </nav>
                 </div>
             </div>
+            <ResumeModal></ResumeModal>
         </div>
     );
 };
