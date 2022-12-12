@@ -14,7 +14,7 @@ const MySkills = () => {
         <div className='min-h-screen' ref={skills}>
             <section className="dark:bg-gray-900">
                 <div className="container px-6 py-10 mx-auto">
-                    <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">My <span className="underline decoration-blue-500">Skills</span></h1>
+                    <h1 className="text-2xl md:text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">My <span className="underline decoration-blue-500">Skills</span></h1>
 
                     <p className="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
                         The key pillars of my web design education are HTML 5, CSS 3, and JavaScript using React JS. <br className='hidden xl:block' /> I am confident working with MongoDB, Node JS, and Express JS on the backend server side.
