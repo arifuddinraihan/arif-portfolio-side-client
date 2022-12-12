@@ -1,5 +1,5 @@
 import React from 'react';
-import Homepage from '../Pages/HomePage/Homepage';
+import { Outlet } from 'react-router-dom';
 import Footer from '../Pages/Shared/Footer/Footer';
 import Navbar from '../Pages/Shared/Navbar/Navbar';
 import Sidebar from '../Pages/Shared/Sidebar/Sidebar';
@@ -19,7 +19,7 @@ const MainLayout = () => {
 
                     </div>
                     <div className='grow lg:ml-4'>
-                        <Homepage></Homepage>
+                        <Outlet></Outlet>
                     </div>
                 </div>
                 <div className='z-40'>
