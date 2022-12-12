@@ -5,7 +5,7 @@ import SingleProject from './SingleProject';
 
 const MyProjects = () => {
     const { projects } = useContext(PageContext)
-    const projectsURL = `http://localhost:5000/myAllSites`
+    const projectsURL = `https://arif-uddin-portfolio-side-server.vercel.app/myAllSites`
     const { data: createdSite = [], isLoading } = useQuery({
         queryKey: ['myAllSites'],
         queryFn: async () => {

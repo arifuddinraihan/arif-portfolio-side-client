@@ -23,7 +23,7 @@ const routes = createBrowserRouter([
     },
     {
         path: '/myCreatedSite/:id',
-        loader: ({ params }) => fetch(`http://localhost:5000/myAllSites/${params.id}`),
+        loader: ({ params }) => fetch(`https://arif-uddin-portfolio-side-server.vercel.app/myAllSites/${params.id}`),
         element: <WebsiteDetailsPage></WebsiteDetailsPage>
     }
 ])
