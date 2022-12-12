@@ -1,15 +1,22 @@
 import React from 'react';
+import { FiPhoneCall } from "react-icons/fi";
+import { BsMailbox } from "react-icons/bs";
 
 const ContactMe = () => {
     return (
         <div>
             <section className="py-16 dark:bg-gray-900 lg:flex">
                 <div className="flex flex-col justify-center w-full p-8 lg:dark:bg-gray-800 lg:px-12 xl:px-32 lg:w-1/2">
-                    <h1 className="text-3xl font-semibold text-gray-800 capitalize dark:text-white lg:text-4xl">hire Me.</h1>
+                    <h1 className="text-3xl font-semibold text-gray-800 capitalize dark:text-white lg:text-4xl">Let's Talk.</h1>
 
                     <p className="mt-4 text-gray-500 dark:text-gray-400">
-                        Ask us everything and we would love
-                        to hear from you
+                        Is the information efficiently organized? <br/> Let me know, Here =>
+                    </p>
+                    <p className='flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 gap-2'>
+                        <FiPhoneCall></FiPhoneCall> +880 1621 841412
+                    </p>
+                    <p className='flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 gap-2'>
+                        <BsMailbox></BsMailbox> mdarifuddinraihan@gmail.com
                     </p>
                 </div>
 

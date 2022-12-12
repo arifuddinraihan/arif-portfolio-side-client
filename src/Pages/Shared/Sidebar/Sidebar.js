@@ -2,7 +2,6 @@ import React from 'react';
 import profile from '../../../assets/DP.jpg'
 import ThemeChange from '../../../Components/ThemeChange/ThemeChange';
 import { FaEye, FaDownload } from "react-icons/fa";
-import ResumeModal from '../../MainHeroSection/ResumeModal/ResumeModal';
 import resumePdf from '../../../assets/resume_of_arifuddin_mern_web_dev.pdf'
 
 const Sidebar = () => {
@@ -60,18 +59,15 @@ const Sidebar = () => {
                         </a>
                         <div className="flex flex-row px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 dark:hover:text-gray-200 hover:text-gray-700">
                             <ThemeChange></ThemeChange>
-                            <label htmlFor="resume-modal" className='btn btn-sm btn-ghost mx-2 text-xl'>
-                                <FaEye></FaEye>
-                            </label>
+                           
                             <button onClick={handleDownloadPdf}
-                                className='btn btn-sm btn-ghost mx-2 text-lg'>
-                                <FaDownload></FaDownload>
+                                className='flex gap-2 btn btn-sm btn-ghost mx-2 text-lg'>
+                                <FaDownload></FaDownload> <span className='text-sm'> Resume</span>
                             </button>
                         </div>
                     </nav>
                 </div>
             </div>
-            <ResumeModal></ResumeModal>
         </div>
     );
 };
