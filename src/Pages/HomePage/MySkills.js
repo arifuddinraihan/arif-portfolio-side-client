@@ -11,7 +11,7 @@ import { SiExpress, SiJsonwebtokens, SiVercel, SiMongodb, SiFirebase, SiReact, S
 const MySkills = () => {
     const { skills } = useContext(PageContext)
     return (
-        <div className='min-h-screen' ref={skills}>
+        <div className='my-24' ref={skills}>
             <section className="dark:bg-gray-900">
                 <div className="container px-6 py-10 mx-auto">
                     <h1 className="text-2xl md:text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">My <span className="underline decoration-blue-500">Skills</span></h1>

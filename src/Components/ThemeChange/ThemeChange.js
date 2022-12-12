@@ -16,7 +16,6 @@ const ThemeChange = () => {
         setTheme(theme === "dark" ? "light" : "dark");
     };
 
-
     return (
         <label className="swap swap-rotate" onChange={handleThemeSwitch}>
 
