@@ -4,6 +4,7 @@ import { PageContext } from '../../Context/RefProvider';
 import SingleProject from './SingleProject';
 
 const MyProjects = () => {
+    const { projects } = useContext(PageContext)
     const projectsURL = `http://localhost:5000/myAllSites`
     const { data: createdSite = [], isLoading } = useQuery({
         queryKey: ['myAllSites'],
@@ -14,8 +15,7 @@ const MyProjects = () => {
             return data;
         }
     })
-    console.log(createdSite)
-    const { projects } = useContext(PageContext)
+    // console.log(createdSite)
     return (
         <div className='' ref={projects}>
             <section className=" dark:bg-gray-900">
