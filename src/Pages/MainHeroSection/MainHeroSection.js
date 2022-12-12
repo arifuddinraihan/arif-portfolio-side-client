@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { WiDirectionUpRight } from "react-icons/wi";
 import { VscGoToFile } from "react-icons/vsc";
-import { Link } from 'react-router-dom';
 import ResumeModal from './ResumeModal/ResumeModal';
+import { PageContext } from '../../Context/RefProvider';
 
 const MainHeroSection = () => {
+    const { aboutMe } = useContext(PageContext)
     return (
-        <div className="px-6 py-10 xl:py-28">
+        <div className="px-6 py-10 xl:py-28" ref={aboutMe}>
             <div className="flex items-center py-6 lg:h-[36rem] lg:flex-row">
                 <div className="">
                     <h2 className="flex items-end text-lg md:text-xl lg:text-3xl font-semibold underline text-primary dark:text-slate-200">

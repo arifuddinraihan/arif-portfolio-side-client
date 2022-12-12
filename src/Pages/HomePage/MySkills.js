@@ -1,76 +1,105 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { PageContext } from '../../Context/RefProvider';
+import { BsFront } from "react-icons/bs";
+import { FaNodeJs, FaServer } from "react-icons/fa";
+import { CgToolbox } from "react-icons/cg";
+import { AiFillHtml5 } from "react-icons/ai";
+import { TbApi } from "react-icons/tb";
+import { SiExpress, SiJsonwebtokens, SiVercel, SiMongodb, SiFirebase, SiReact, SiReactrouter, SiCss3, SiJavascript, SiGithub, SiGooglechrome, SiNetlify, SiFigma, SiGooglefonts, SiVisualstudiocode } from "react-icons/si";
+
 
 const MySkills = () => {
+    const { skills } = useContext(PageContext)
     return (
-        <div>
+        <div className='min-h-screen' ref={skills}>
             <section className="dark:bg-gray-900">
                 <div className="container px-6 py-10 mx-auto">
-                    <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">explore our <br /> awesome <span className="underline decoration-blue-500">Components</span></h1>
+                    <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">My <span className="underline decoration-blue-500">Skills</span></h1>
 
                     <p className="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
+                        The key pillars of my web design education are HTML 5, CSS 3, and JavaScript using React JS. <br className='hidden xl:block' /> I am confident working with MongoDB, Node JS, and Express JS on the backend server side.
                     </p>
 
                     <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
                         <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
                             <span className="inline-block text-blue-500 dark:text-blue-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
-                                </svg>
+                                <BsFront className='w-8 h-8'></BsFront>
                             </span>
 
-                            <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">elegant Dark Mode</h1>
+                            <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">
+                                Front End Technology</h1>
 
-                            <p className="text-gray-500 dark:text-gray-300">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
-                            </p>
-
-                            <a href="#" className="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </a>
+                            <div className='flex justify-between items-center'>
+                                <ul className="text-gray-500 dark:text-gray-300">
+                                    <li className='flex mt-2 items-center gap-2'><AiFillHtml5 className='w-6 h-6'></AiFillHtml5> HTML5</li>
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiCss3 className='w-6 h-6'></SiCss3> CSS3</li>
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiJavascript className='w-6 h-6'></SiJavascript> JavaScript</li>
+                                </ul>
+                                <ul className="text-gray-500 dark:text-gray-300">
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiReact className='w-6 h-6'></SiReact> React JS</li>
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiReactrouter className='w-6 h-6'></SiReactrouter> React Router</li>
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiFirebase className='w-6 h-6'></SiFirebase> Firebase</li>
+                                </ul>
+                            </div>
                         </div>
-
                         <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
                             <span className="inline-block text-blue-500 dark:text-blue-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-                                </svg>
+                                <FaServer className='w-8 h-8'></FaServer>
                             </span>
 
-                            <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Easy to customiztions</h1>
+                            <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">
+                                Backend Technology</h1>
 
-                            <p className="text-gray-500 dark:text-gray-300">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
-                            </p>
-
-                            <a href="#" className="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </a>
+                            <div className='flex justify-between items-center'>
+                                <ul className="text-gray-500 dark:text-gray-300">
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiMongodb className='w-6 h-6'></SiMongodb> MongoDB</li>
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <FaNodeJs className='w-6 h-6'></FaNodeJs> Node JS</li>
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiExpress className='w-6 h-6'></SiExpress> Express JS</li>
+                                </ul>
+                                <ul className="text-gray-500 dark:text-gray-300">
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <TbApi className='w-6 h-6'></TbApi> API</li>
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiVercel className='w-6 h-6'></SiVercel> Vercel</li>
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiJsonwebtokens className='w-6 h-6'></SiJsonwebtokens> Json WebToken</li>
+                                </ul>
+                            </div>
                         </div>
-
                         <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
                             <span className="inline-block text-blue-500 dark:text-blue-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                                </svg>
+                                <CgToolbox className='w-8 h-8'></CgToolbox>
                             </span>
 
-                            <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Simple & clean designs</h1>
+                            <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">
+                                Tools I use</h1>
 
-                            <p className="text-gray-500 dark:text-gray-300">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
-                            </p>
-
-                            <a href="#" className="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </a>
+                            <div className='flex justify-between items-center'>
+                                <ul className="text-gray-500 dark:text-gray-300">
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiVisualstudiocode className='w-6 h-6'></SiVisualstudiocode> VS Code</li>
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiGithub className='w-6 h-6'></SiGithub> Github</li>
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiGooglechrome className='w-6 h-6'></SiGooglechrome> Dev Tool</li>
+                                </ul>
+                                <ul className="text-gray-500 dark:text-gray-300">
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiNetlify className='w-6 h-6'></SiNetlify> Netlify</li>
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiFigma className='w-6 h-6'></SiFigma> Figma</li>
+                                    <li className='flex mt-2 items-center gap-2'>
+                                        <SiGooglefonts className='w-6 h-6'></SiGooglefonts> Google Fonts</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
