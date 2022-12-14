@@ -3,6 +3,7 @@ import { GoChevronLeft } from "react-icons/go";
 import { Link, useLoaderData } from 'react-router-dom';
 import { RxDot } from "react-icons/rx";
 import ImageGallery from 'react-image-gallery';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const WebsiteDetailsPage = () => {
     const [data] = useLoaderData()
@@ -46,7 +47,13 @@ const WebsiteDetailsPage = () => {
                 <div className="max-w-4xl my-10 overflow-hidden bg-base-100 rounded-lg shadow-md dark:bg-gray-800">
                     <Link to={'/'} className="flex w-1/3 items-center gap-3 mx-2 my-4 px-6 py-3 mt-4 text-sm font-extrabold tracking-wide text-white dark:text-slate-800 capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-blue-400 dark:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                         <GoChevronLeft className='h-6'></GoChevronLeft> Go Back</Link>
-                    <img className="object-cover w-full h-64" src={imgURL} alt={name} />
+                    <PhotoProvider>
+                        <div className="foo">
+                            <PhotoView src={imgURL}>
+                                <img className='object-cover w-full h-64' src={imgURL} alt={name} />
+                                </PhotoView>  
+                        </div>
+                    </PhotoProvider>
 
                     <div className="p-6">
                         <div>
