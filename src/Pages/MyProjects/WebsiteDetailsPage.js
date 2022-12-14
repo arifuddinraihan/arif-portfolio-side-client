@@ -11,7 +11,8 @@ const WebsiteDetailsPage = () => {
         <div className='min-h-screen dark:bg-gray-800'>
             <div className='container mx-auto flex justify-center'>
                 <div className="max-w-4xl my-10 overflow-hidden bg-base-100 rounded-lg shadow-md dark:bg-gray-800">
-                    <Link to={`/`} className="flex w-1/3 items-center gap-3 mx-2 my-4 px-6 py-3 mt-4 text-sm font-extrabold tracking-wide text-white dark:text-slate-800 capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-blue-400 dark:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" tabIndex="0" role="link"><GoChevronLeft className='h-6'></GoChevronLeft> Go Back</Link>
+                    <Link to={'/'} className="flex w-1/3 items-center gap-3 mx-2 my-4 px-6 py-3 mt-4 text-sm font-extrabold tracking-wide text-white dark:text-slate-800 capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-blue-400 dark:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                        <GoChevronLeft className='h-6'></GoChevronLeft> Go Back</Link>
                     <img className="object-cover w-full h-64" src={imgURL} alt={name} />
 
                     <div className="p-6">
@@ -21,7 +22,7 @@ const WebsiteDetailsPage = () => {
                             <ul className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                                 {
                                     details.map((detail, i) => <li key={i}
-                                        className="my-2 gap-3 flex items-center justify-start text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600"
+                                        className="my-2 gap-3 flex items-start justify-start text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600"
                                     ><RxDot></RxDot> {detail}</li>)
                                 }
                             </ul>
