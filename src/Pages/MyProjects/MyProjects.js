@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
+import PrimarySpinner from '../../Components/ThemeChange/PrimarySpinner/PrimarySpinner';
 import { PageContext } from '../../Context/RefProvider';
 import SingleProject from './SingleProject';
 
@@ -16,8 +17,12 @@ const MyProjects = () => {
         }
     })
     // console.log(createdSite)
+    if(isLoading){
+        return <PrimarySpinner></PrimarySpinner>
+    }
     return (
         <div className='' ref={projects}>
+            
             <section className=" dark:bg-gray-900">
                 <div className="container px-6 py-10 mx-auto">
                     <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Completed <span className="underline decoration-blue-500">Projects</span></h1>

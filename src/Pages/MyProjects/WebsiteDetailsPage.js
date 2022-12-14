@@ -1,31 +1,46 @@
 import React from 'react';
 import { GoChevronLeft } from "react-icons/go";
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import { RxDot } from "react-icons/rx";
 
 const WebsiteDetailsPage = () => {
+    const [data] = useLoaderData()
+    const { imgURL, name, details, imgGallery, clientSiteGit, serverSiteGit, siteLink, type, _id, usedTech } = data
+    console.log(data)
     return (
-        <div class="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
-            <Link to={`/`} class="flex items-center gap-3 mx-2 px-6 py-3 mt-4 text-sm font-extrabold tracking-wide text-white dark:text-slate-800 capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-blue-400 dark:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" tabindex="0" role="link"><GoChevronLeft className='h-6'></GoChevronLeft> Go Back</Link>
-            <img class="object-cover w-full h-64" src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Article" />
+        <div className='min-h-screen dark:bg-gray-800'>
+            <div className='container mx-auto flex justify-center'>
+                <div className="max-w-4xl my-10 overflow-hidden bg-base-100 rounded-lg shadow-md dark:bg-gray-800">
+                    <Link to={`/`} className="flex w-1/3 items-center gap-3 mx-2 my-4 px-6 py-3 mt-4 text-sm font-extrabold tracking-wide text-white dark:text-slate-800 capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-blue-400 dark:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" tabIndex="0" role="link"><GoChevronLeft className='h-6'></GoChevronLeft> Go Back</Link>
+                    <img className="object-cover w-full h-64" src={imgURL} alt={name} />
 
-            <div class="p-6">
-                <div>
-                    <span class="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">Product</span>
-                    <a href="#" class="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabindex="0" role="link">I Built A Successful Blog In One Year</a>
-                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie parturient et sem ipsum volutpat vel. Natoque sem et aliquam mauris egestas quam volutpat viverra. In pretium nec senectus erat. Et malesuada lobortis.</p>
-                </div>
-
-                <div class="mt-4">
-                    <div class="flex items-center">
-                        <div class="flex items-center">
-                            <img class="object-cover h-10 rounded-full" src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60" alt="Avatar" />
-                            <a href="#" class="mx-2 font-semibold text-gray-700 dark:text-gray-200" tabindex="0" role="link">Jone Doe</a>
+                    <div className="p-6">
+                        <div>
+                            <span className="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">{type}</span>
+                            <a href="#" className="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabIndex="0" role="link">{name}</a>
+                            <ul className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                                {
+                                    details.map((detail, i) => <li key={i}
+                                        className="my-2 gap-3 flex items-center justify-start text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600"
+                                    ><RxDot></RxDot> {detail}</li>)
+                                }
+                            </ul>
                         </div>
-                        <span class="mx-1 text-xs text-gray-600 dark:text-gray-300">21 SEP 2015</span>
+
+                        <div className="mt-4">
+                            <div className="flex items-center">
+                                <div className="flex items-center">
+                                    <img className="object-cover h-10 rounded-full" src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60" alt="Avatar" />
+                                    <a href="#" className="mx-2 font-semibold text-gray-700 dark:text-gray-200" tabIndex="0" role="link">Jone Doe</a>
+                                </div>
+                                <span className="mx-1 text-xs text-gray-600 dark:text-gray-300">21 SEP 2015</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     );
 };
 
