@@ -2,11 +2,44 @@ import React from 'react';
 import { GoChevronLeft } from "react-icons/go";
 import { Link, useLoaderData } from 'react-router-dom';
 import { RxDot } from "react-icons/rx";
+import ImageGallery from 'react-image-gallery';
 
 const WebsiteDetailsPage = () => {
     const [data] = useLoaderData()
-    const { imgURL, name, details, imgGallery, clientSiteGit, serverSiteGit, siteLink, type, _id, usedTech } = data
-    console.log(data)
+    const { imgURL, name, details, imgGallery, clientSiteGit, serverSiteGit, siteLink, type, usedTech } = data
+    const { img1, img2, img3, img4, img5, img6 } = imgGallery
+    console.log(imgGallery)
+    const images = [
+        {
+            original: imgURL,
+            thumbnail: imgURL,
+        },
+        {
+            original: img1,
+            thumbnail: img1,
+        },
+        {
+            original: img2,
+            thumbnail: img2,
+        },
+        {
+            original: img3,
+            thumbnail: img3,
+        },
+        {
+            original: img4,
+            thumbnail: img4,
+        },
+        {
+            original: img5,
+            thumbnail: img5,
+        },
+        {
+            original: img6,
+            thumbnail: img6,
+        },
+
+    ];
     return (
         <div className='min-h-screen dark:bg-gray-800'>
             <div className='container mx-auto flex justify-center'>
@@ -19,8 +52,8 @@ const WebsiteDetailsPage = () => {
                         <div>
                             <div className='flex flex-wrap md:flex-nowrap gap-2 items-center'>
                                 <span className="text-md font-medium text-blue-600 uppercase dark:text-blue-400">{type}</span>
-                                <a href={clientSiteGit} target="_blank" className="btn btn-sm glass">Client Side</a>
-                                <a href={serverSiteGit} target="_blank" className="btn btn-sm glass">Server Site</a>
+                                <a href={clientSiteGit} target="_blank" className="btn btn-sm btn-outline dark:glass">Client Side</a>
+                                <a href={serverSiteGit} target="_blank" className="btn btn-sm btn-outline dark:glass">Server Site</a>
                             </div>
 
                             <a href={siteLink} target='_blank' className="block mt-2 my-4 text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-cyan-600 dark:hover:text-cyan-300 hover:underline" tabIndex="0" role="link">{name}</a>
@@ -33,14 +66,12 @@ const WebsiteDetailsPage = () => {
                             </ul>
                         </div>
 
-                        <div className="mt-4">
-                            <div className="flex items-center">
-                                <div className="flex items-center">
-                                    <img className="object-cover h-10 rounded-full" src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60" alt="Avatar" />
-                                    <a href="#" className="mx-2 font-semibold text-gray-700 dark:text-gray-200" tabIndex="0" role="link">Jone Doe</a>
-                                </div>
-                                <span className="mx-1 text-xs text-gray-600 dark:text-gray-300">21 SEP 2015</span>
-                            </div>
+                        <div className="mt-6">
+                            <h2 className=" text-center block mt-2 my-8 text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-cyan-600 dark:hover:text-cyan-300 hover:underline">Website Pages</h2>
+                            <ImageGallery items={images}
+                                autoPlay={true}
+                                showThumbnails={false}
+                            />
                         </div>
                     </div>
                 </div>

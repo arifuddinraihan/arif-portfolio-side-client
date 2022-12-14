@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* REACT IMAGE GALLERY */
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 /* Google Fonts- Kaisai Decol */
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap');
 
