@@ -17,8 +17,13 @@ const WebsiteDetailsPage = () => {
 
                     <div className="p-6">
                         <div>
-                            <span className="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">{type}</span>
-                            <a href="#" className="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabIndex="0" role="link">{name}</a>
+                            <div className='flex flex-wrap md:flex-nowrap gap-2 items-center'>
+                                <span className="text-md font-medium text-blue-600 uppercase dark:text-blue-400">{type}</span>
+                                <a href={clientSiteGit} target="_blank" className="btn btn-sm glass">Client Side</a>
+                                <a href={serverSiteGit} target="_blank" className="btn btn-sm glass">Server Site</a>
+                            </div>
+
+                            <a href={siteLink} target='_blank' className="block mt-2 my-4 text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-cyan-600 dark:hover:text-cyan-300 hover:underline" tabIndex="0" role="link">{name}</a>
                             <ul className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                                 {
                                     details.map((detail, i) => <li key={i}
