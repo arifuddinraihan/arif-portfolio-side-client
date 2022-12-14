@@ -24,8 +24,8 @@ const SingleProject = ({ site }) => {
                 <div className="mt-4">
                     <div className="flex items-center">
                         <div className="flex items-center">
-                            <a href={siteLink} target="_blank" className="flex items-center gap-3 mx-2 px-6 py-3 mt-4 text-sm font-extrabold tracking-wide text-white dark:text-slate-800 capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-blue-400 dark:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" tabIndex="0" role="link"><GoBrowser className='h-6'></GoBrowser> Visit Site</a>
-                            <Link to={`/myCreatedSite/${_id}`} className="flex items-center gap-3 mx-2 px-6 py-3 mt-4 text-sm font-extrabold tracking-wide text-white dark:text-slate-800 capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-blue-400 dark:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" tabIndex="0" role="link"><GoChevronRight className='h-6'></GoChevronRight> More Details</Link>
+                            <a href={siteLink} target="_blank" className="flex items-center gap-3 mx-2 px-6 py-3 mt-4 text-xs md:text-sm font-extrabold tracking-wide text-white dark:text-slate-800 capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-blue-400 dark:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" tabIndex="0" role="link"><GoBrowser className='h-6'></GoBrowser> Visit Site</a>
+                            <Link to={`/myCreatedSite/${_id}`} className="flex items-center gap-3 mx-2 px-6 py-3 mt-4 text-xs md:text-sm font-extrabold tracking-wide text-white dark:text-slate-800 capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-blue-400 dark:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" tabIndex="0" role="link"><GoChevronRight className='h-6'></GoChevronRight> More Details</Link>
                         </div>
                     </div>
                 </div>

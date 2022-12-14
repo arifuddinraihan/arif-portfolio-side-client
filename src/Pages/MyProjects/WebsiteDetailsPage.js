@@ -52,8 +52,10 @@ const WebsiteDetailsPage = () => {
                         <div>
                             <div className='flex flex-wrap md:flex-nowrap gap-2 items-center'>
                                 <span className="text-md font-medium text-blue-600 uppercase dark:text-blue-400">{type}</span>
-                                <a href={clientSiteGit} target="_blank" className="btn btn-sm btn-outline dark:glass">Client Side</a>
-                                <a href={serverSiteGit} target="_blank" className="btn btn-sm btn-outline dark:glass">Server Site</a>
+                                <div className='flex gap-2'>
+                                    <a href={clientSiteGit} target="_blank" className="btn btn-sm btn-outline dark:glass">Client Side</a>
+                                    <a href={serverSiteGit} target="_blank" className="btn btn-sm btn-outline dark:glass">Server Site</a>
+                                </div>
                             </div>
 
                             <a href={siteLink} target='_blank' className="block mt-2 my-4 text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-cyan-600 dark:hover:text-cyan-300 hover:underline" tabIndex="0" role="link">{name}</a>
@@ -61,7 +63,7 @@ const WebsiteDetailsPage = () => {
                                 {
                                     details.map((detail, i) => <li key={i}
                                         className="my-2 gap-3 flex items-start justify-start text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600"
-                                    ><RxDot></RxDot> {detail}</li>)
+                                    ><RxDot className='w-4 h-4'></RxDot> {detail}</li>)
                                 }
                             </ul>
                         </div>
