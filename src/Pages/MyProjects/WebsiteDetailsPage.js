@@ -50,7 +50,7 @@ const WebsiteDetailsPage = () => {
                     <PhotoProvider>
                         <div className="foo">
                             <PhotoView src={imgURL}>
-                                <img className='object-cover w-full h-64' src={imgURL} alt={name} />
+                                <img className='object-cover w-full h-64 hover:cursor-pointer' src={imgURL} alt={name} />
                                 </PhotoView>  
                         </div>
                     </PhotoProvider>

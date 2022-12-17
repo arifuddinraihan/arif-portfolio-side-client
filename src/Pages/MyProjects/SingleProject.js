@@ -1,5 +1,5 @@
 import React from 'react';
-import { GoBrowser,GoChevronRight } from "react-icons/go";
+import { GoBrowser, GoChevronRight } from "react-icons/go";
 import { Link } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 
@@ -11,7 +11,7 @@ const SingleProject = ({ site }) => {
             <PhotoProvider>
                 <div className="foo">
                     <PhotoView src={imgURL}>
-                        <img className='object-cover w-full h-64' src={imgURL} alt={name} />
+                        <img className='object-cover w-full h-64 hover:cursor-pointer' src={imgURL} alt={name} />
                     </PhotoView>
                 </div>
             </PhotoProvider>
@@ -20,7 +20,7 @@ const SingleProject = ({ site }) => {
             <div className="p-6">
                 <div>
                     <span className="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">{type}</span>
-                    <a href="#" className="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabIndex="0" role="link">{name}</a>
+                    <h2 className="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline">{name}</h2>
                     <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 flex flex-wrap">
                         {
                             usedTech.map((tech, i) => <p className='text-xs bg-slate-800 text-slate-200 p-2 rounded-lg m-1' key={i}>{tech}</p>)
